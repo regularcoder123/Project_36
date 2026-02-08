@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascending and Decending</title>
+</head>
+<body>
+    <p>Ascending and Decending values for array numbers</p>
+    <p id="value"></p>
+    <button onclick="ascending()">Ascending order</button>
+    <button onclick="descending()">Descending order</button>
+    <script>
+        var numbers = [43, 12, 99, 201];
+        function multiply(num){
+            return num * 100
+        }
+        var newarray = numbers.map(multiply)
+        document.getElementById("value").innerHTML = "The Mapped values are: " + newarray;
+        function ascending() {
+            newarray.sort(function(a, b) { return a - b });
+            document.getElementById("value").innerHTML = 
+            "The ascending order of the values are: " + newarray;
+        }
+
+        function descending() {
+            newarray.sort(function(a, b) { return b - a });
+            document.getElementById("value").innerHTML = 
+            "The descending order of the values are: " + newarray;
+        }
+    </script>
+
+    
+</body>
+</html>
